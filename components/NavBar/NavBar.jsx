@@ -203,8 +203,8 @@ const NavBar = () => {
 
         {/* mobile navbar */}
         {navOpen &&
-      <div className="flex flex-col items-start h-auto gap-2 mt-2 bg-crossBlue w-100 text-white px-1 py-2">
-          <Link href="/" className={`pl-1 w-100 h-30px ${pathname ==='/' ? 'border-b' : ''}`}
+      <div className="flex flex-col items-start h-auto gap-2 mt-2 bg-crossBlue w-100 text-white px-1 py-2 dark:bg-white dark:text-crossBlue">
+          <Link href="/" className={`pl-1 w-100 h-30px ${pathname ==='/' ? 'border-b dark:border-crossBlue dark:border-b' : ''}`}
           onClick={toggleNav}
           >Home</Link>
            {!session &&

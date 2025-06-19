@@ -2,7 +2,7 @@
 
 A dynamic feed explorer application built with **Next.js**, showcasing infinite scroll, filtering, dynamic metadata for SEO, and responsive UI — designed as part of the **Glimpse 33 Media React/Next.js Frontend Engineer Assessment**.
 
-✅ Deployed on Vercel → [Live Demo](https://my-vercel-url.vercel.app)
+✅ Deployed on Vercel → [Live Demo](https://glimpse-feed-explorer.vercel.app)
 
 
 ## Features
