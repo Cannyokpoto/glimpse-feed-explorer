@@ -26,7 +26,7 @@ const FeedCard = ({feed}) => {
   
   
   return (
-    <Link href={`/feed/${feed._id}`} className="h-auto hover:shadow-md rounded-xl small:w-85vw large:w-300px cursor-pointer border dark:border-gray-500">
+    <Link href={`/feed/${feed._id}`} className="h-auto border cursor-pointer hover:shadow-md rounded-xl small:w-85vw large:w-300px dark:border-gray-500">
       
       <div>
         <Image
@@ -43,10 +43,10 @@ const FeedCard = ({feed}) => {
         <div className="text-left md:text-center lg:text-left">
           <h3 className="font-bold text-18px dark:text-white">{feed.title}</h3>
 
-          <p className="text-gray-600 mt-2 dark:text-gray-400">{feed.description.slice(0, 80)}...</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">{feed.description.slice(0, 80)}...</p>
         </div>
 
-        <div className="flex text-13px w-100 justify-between items-center">
+        <div className="flex items-center justify-between text-13px w-100">
           <div className="flex items-center gap-0.5 text-homeGold font-semibold"><FaRegUser className="text-homeGold" /> {feed.author}</div>
 
           <div className="text-gray-400">{formatDate(feed.date)}</div>

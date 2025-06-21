@@ -13,7 +13,7 @@ A dynamic feed explorer application built with **Next.js**, showcasing infinite 
 - ✅ Search and category filter
 - ✅ SEO with dynamic metadata (`title`, `description`, `og:image`)
 - ✅ Skeletons for loading states
-- ✅ Responsive design (mobile-first)
+- ✅ Responsive design using tailwind CSS (mobile-first)
 
 ### 💻 Technical Stack
 - **Next.js App Router**
@@ -25,10 +25,16 @@ A dynamic feed explorer application built with **Next.js**, showcasing infinite 
 
 
 ### 🔧 Extras
-- 🌗 Dark/Light theme toggle
-- 🔐 OAuth with Google provider
-- 🐢 Simulated network delay (to test loaders)
-- 🐢 Add animations for transitions between pages
-- 💾 Live data from MongoDB
+- Dark/Light theme toggle
+- OAuth with Google provider
+- Live data from MongoDB
+- Share buttons for major social media platforms (Facebook, WhatsApp, Twitter, Email)
+- Simulated network delay (to test loaders)
+- Animations for transitions between pages
+
+## Testing
+- Unit test for 3 Components (FeedCard, FeedFilter and ShareButtons)
+- Integration test for user flow (OAuth)
+
 
 
