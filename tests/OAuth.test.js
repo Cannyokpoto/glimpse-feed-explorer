@@ -5,7 +5,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NavBar from '@/components/NavBar/NavBar';
 import { SessionProvider } from 'next-auth/react';
-
+import { signIn } from 'next-auth/react';
+import { ThemeProvider } from '@/ThemeProvider/ThemeProvider';
 
 
 // Mock NextAuth signIn function
@@ -19,13 +20,14 @@ jest.mock('next-auth/react', () => ({
   }),
 }));
 
-import { signIn } from 'next-auth/react';
 
 describe('OAuth Integration - Google Sign In', () => {
   it('calls signIn when the Google button is clicked', async () => {
     render(
       <SessionProvider session={null}>
-        <NavBar />
+        <ThemeProvider>
+          <NavBar />
+        </ThemeProvider>
       </SessionProvider>
     );
 
