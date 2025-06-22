@@ -1,6 +1,6 @@
-// Import testing tools and the component
 import { render, screen } from '@testing-library/react';
 import ShareButtons from './ShareButtons';
+
 
 // Mock react-share and all its exports
 jest.mock('react-share', () => ({
@@ -16,10 +16,11 @@ jest.mock('react-share', () => ({
 
 
 describe('ShareButtons', () => {
+  
   const mockPost = {
     _id: "abc123",
     title: "A Test Article",
-    author: "Jane Doe",
+    author: "Promise Okpoto",
     category: "marketing",
   };
 
@@ -35,7 +36,7 @@ describe('ShareButtons', () => {
     expect(screen.getByText('WhatsappIcon')).toBeInTheDocument();
     expect(screen.getByText('EmailIcon')).toBeInTheDocument();
 
-    // Check if the wrappers (buttons) are present
+    // Check if the wrappers are present
     expect(screen.getByTestId('facebook')).toBeInTheDocument();
     expect(screen.getByTestId('twitter')).toBeInTheDocument();
     expect(screen.getByTestId('whatsapp')).toBeInTheDocument();

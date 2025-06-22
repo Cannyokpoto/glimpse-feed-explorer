@@ -1,29 +1,31 @@
-// Import utilities from Testing Library and the component to test
 import { render, screen, fireEvent } from '@testing-library/react';
 import FeedFilter from './FeedFilter';
 
-// Start the test suite for FeedFilter component
+
+
 describe('FeedFilter Component', () => {
   // Create mock functions to simulate state setters passed as props
   const mockSetSearch = jest.fn();
   const mockSetCategory = jest.fn();
 
-  // Before each test, render the component with the mock props
+  //Before each test, render the component with the mock props
   beforeEach(() => {
     render(
       <FeedFilter
-        search="" // initial search value
-        setSearch={mockSetSearch} // mock search setter
-        category="All" // default selected category
-        setCategory={mockSetCategory} // mock category setter
+        search=""
+        setSearch={mockSetSearch}
+        category="All"
+        setCategory={mockSetCategory}
       />
     );
   });
+
 
   // Test 1: Check if UI elements render properly
   test('renders search input and category buttons', () => {
     // Check if the search input exists
     expect(screen.getByPlaceholderText('Search...')).toBeInTheDocument();
+
 
     // Check if all category buttons exist
     expect(screen.getByText('All')).toBeInTheDocument();
@@ -32,18 +34,21 @@ describe('FeedFilter Component', () => {
     expect(screen.getByText('Marketing')).toBeInTheDocument();
   });
 
-  // Test 2: Simulate typing in the search input and assert that setSearch is called correctly
+
+  //Test 2: Simulate typing in the search input and assert that setSearch is called correctly
   test('calls setSearch when typing in search input', () => {
     // Get the search input element
     const input = screen.getByPlaceholderText('Search...');
 
-    // Simulate user typing "nextjs" in the input
-    fireEvent.change(input, { target: { value: 'nextjs' } });
+    // Simulate user typing "glimpse" in the input
+    fireEvent.change(input, { target: { value: 'glimpse' } });
 
-    // Verify that setSearch was called with "nextjs"
-    expect(mockSetSearch).toHaveBeenCalledWith('nextjs');
+    // Verify that setSearch was called with "glimpse"
+    expect(mockSetSearch).toHaveBeenCalledWith('glimpse');
   });
 
+
+  
   // Test 3: Simulate clicking a category button and check if setCategory is called correctly
   test('calls setCategory when clicking category button', () => {
     // Get the "Design" button
